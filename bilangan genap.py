@@ -1,19 +1,10 @@
+# Membuat array berisi angka 1-10
+bilangan = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# print("=======MENCARI BILANGAN GENAP=======")
-# bil = int(input("Masukkan bilangan maksimal: "))
-# i = 0
-# while i < bil:
-#     print(i)
-#     i+=6
-#     if i == bil:
-#         break
-
-bilangan = int(input("Masukkan bilangan bulat positif (1-100): "))
-
-if bilangan >= 1 and bilangan <= 100:
-    if bilangan % 6 == 0:
-        print(f"{bilangan} adalah kelipatan 6.")
-    else:
-        print(f"{bilangan} bukan kelipatan 6.")
-else:
-    print("Bilangan yang dimasukkan harus antara 1 hingga 100.")
+# Menggunakan loop untuk menampilkan bilangan genap
+for angka in bilangan:
+    
+# Memeriksa apakah angka genap
+    if angka % 2 == 0:  
+        genap = angka
+        print(genap)
