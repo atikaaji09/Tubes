@@ -1,38 +1,16 @@
-# Method function
-def hitung_luas(jari_jari):
-    luas = 3.14 * jari_jari**2
-    return luas
+# selection sorting
+def selection_sort(array):
+    for i in range(len(array)):
+        min_index = i
+        for j in range(i+1, len(array)):
+            if array[min_index] > array[j] :
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
+    return array
 
-def hitung_keliling(jari_jari):
-    keliling = 2 * 3.14 * jari_jari
-    return keliling
+nama = ['Zhafira', 'Nirmala', 'Aksara', 'Nalendra', 'Cakra', 'Sastra', 'Agni', 'Bagas', 'Jerome', 'Kiara']
+print("Nama 10 Anggota Organisasi")
+print(f"Before : {nama}")
+selection_sort(nama)
+print(f"After : {nama}")
 
-# Membaca input dari pengguna
-jari_jari = int(input("Masukkan jari-jari lingkaran : "))
-
-# Menghitung dan mencetak luas lingkaran
-luas = hitung_luas(jari_jari)
-print("Luas lingkaran adalah :", luas)
-
-# Menghitung dan mencetak keliling lingkaran
-keliling = hitung_keliling(jari_jari)
-print("Keliling lingkaran adalah :", keliling)
-
-
-# Method prosedur
-def hitung_luas(jari_jari):
-    luas = 3.14 * jari_jari**2
-    print("Luas lingkaran adalah :", luas)
-
-def hitung_keliling(jari_jari):
-    keliling = 2 * 3.14 * jari_jari
-    print("Keliling lingkaran adalah :", keliling)
-
-# Membaca input dari pengguna
-jari_jari = int(input("Masukkan jari-jari lingkaran : "))
-
-# Memanggil prosedur untuk menghitung luas lingkaran
-hitung_luas(jari_jari)
-
-# Memanggil prosedur untuk menghitung keliling lingkaran
-hitung_keliling(jari_jari)
