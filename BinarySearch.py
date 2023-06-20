@@ -1,10 +1,9 @@
-def bubble_sort(keyword, nomer):
-    for i in range(len(nomer)):
-        for j in range(len(nomer) - i - 1):
-            if str(nomer[j]).lower() > str(nomer[j+1]).lower():
-                nomer[j], nomer[j+1] = nomer[j+1], nomer[j]
-    return binary_search(keyword, nomer)
-
+def bubble_sort(keyword,data):
+    for i in range(len(data)):
+        for j in range(len(data) - i - 1):
+            if str(data)[j].lower() > str(data)[j + 1].lower():
+                data[j], data[j + 1] = data[j + 1], data[j]
+    return binary_search(keyword,data)
 
 def binary_search(keyword, data):
     left = 0
@@ -18,12 +17,12 @@ def binary_search(keyword, data):
             left = mid + 1
         else:
             print(data)
-            print(f"Keyword {keyword} has been found at index {mid}")
+            print(f"Keyword {keyword} has found at indeks {mid}")
             return mid
-
+        
     print(f"Keyword {keyword} not found")
     return -1
-
-data = [17, 2, 15, 7, 72, 31, 12, 57, 63, 71, 23, 92, 1]
-keyword = input("Input keyword: ")
+    
+data = [12, 14, 24, 10, 2, 5, 22]
+keyword = input("Input Keyword: ")
 bubble_sort(keyword, data)
